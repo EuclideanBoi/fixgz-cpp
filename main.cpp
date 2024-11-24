@@ -43,13 +43,13 @@ int main(int argc, char **argv) {
 	
 	while ((c2 = in.get()) != EOF) {
 		if (c1 != '\r' || c2 != '\n') {
-			out << c1;
+			out.put(c1);
 		}
 		c1 = c2;
 	}
 	
 	if (c1 != EOF) {
-		out << c1;
+		out.put(c1);
 	}
 	
 	return 0;
